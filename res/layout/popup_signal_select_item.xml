@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_signal_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/commshow_bg_showitem_top" />
+
+    <TextView
+        android:id="@+id/tvAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/commshow_bg_showitem_mid"
+        android:gravity="center"
+        android:text="录音获取"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+    
+    <TextView
+        android:id="@+id/tvMp3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/commshow_bg_showitem_mid"
+        android:gravity="center"
+        android:text="MP3获取"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

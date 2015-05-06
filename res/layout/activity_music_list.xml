@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#c6f4ff" >
+    
+    <include layout = "@layout/activity_top" />
+
+    <com.cyberway.frame.components.RefreshListView
+        android:id="@+id/rlvMP3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:cacheColorHint="@color/transparent"
+        android:layout_weight="1"
+        android:dividerHeight="1dp"
+        android:divider="#c6f4ff"
+        android:footerDividersEnabled="false" />
+
+</LinearLayout>

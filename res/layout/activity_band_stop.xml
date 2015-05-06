@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#99ccff" >
+    
+    <include layout="@layout/activity_top"/>
+
+    <ScrollView
+        android:id="@+id/slvBandStop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2" >
+            
+            <TextView 
+                android:id="@+id/tvParams"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dip"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="@string/filterTips"/>
+
+            <LinearLayout
+                android:id="@+id/llBandStop_up"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/llBandStop_Res"
+                    android:layout_width="match_parent"
+                    android:layout_height="360dp"
+                    android:orientation="vertical"
+                    android:background="@color/black"
+                    android:layout_margin="5dp" >
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner_bandstop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="5dip" />
+
+                <Button
+                    android:id="@+id/btnFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/fft_btn_sure_selector"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:text="开始滤波" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBandStop_result"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:background="@color/black"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone" >
+            </LinearLayout>
+            
+            <Button 
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginLeft="40dp"
+              	android:layout_marginRight="40dp"
+              	android:layout_marginTop="10dp"
+              	android:layout_marginBottom="10dp"
+              	android:background="@drawable/save_data_selector"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="保存数据"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#99ccff" >
+    
+    <include layout="@layout/activity_top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dip"
+        android:background="@color/white" >
+
+        <Button
+            android:id="@+id/btnBandStop"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@color/transparent"
+            android:layout_marginLeft="10dip"
+            android:gravity="left|center_vertical"
+            android:drawableLeft="@drawable/bandstop"
+            android:textSize="18sp"
+            android:textColor="#0099ff"
+            android:text="\t50Hz陷波器" />
+        
+        <View 
+            style="@style/lineView"/>
+
+        <Button
+            android:id="@+id/btnFFt"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@color/transparent"
+            android:layout_marginLeft="10dip"
+            android:gravity="left|center_vertical"
+            android:drawableLeft="@drawable/transform"
+            android:textSize="18sp"
+            android:textColor="#0099ff"
+            android:text="\t音频信号傅立叶变换" />
+        
+        <View 
+            style="@style/lineView"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnSoundTouch"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@color/transparent"
+            android:layout_marginLeft="10dip"
+            android:gravity="left|center_vertical"
+            android:drawableLeft="@drawable/soundtouch"
+            android:textSize="18sp"
+            android:textColor="#0099ff"
+            android:text="\t变声器"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1" >
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:text="@string/statement" />
+
+</LinearLayout>
