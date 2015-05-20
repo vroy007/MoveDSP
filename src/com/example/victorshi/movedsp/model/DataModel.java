@@ -1,14 +1,12 @@
 package com.example.victorshi.movedsp.model;
 
 import java.util.ArrayList;
-
-import com.cyberway.frame.models.BaseModel;
 /**
  * 数据model
  * @author smnan
  *
  */
-public class DataModel extends BaseModel {
+public class DataModel{
 
 	private ArrayList<byte[]> bufWave; //时域波形数据
 	private ArrayList<byte[]> bufFFt; //频域波形数据

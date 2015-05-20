@@ -1,5 +1,6 @@
 package com.example.victorshi.movedsp.activitys;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +11,7 @@ import android.view.WindowManager;
 import com.cyberway.frame.activity.BaseActivity;
 import com.example.victorshi.movedsp.R;
 
-public class FlashScreenActivity extends BaseActivity {
+public class FlashScreenActivity extends Activity {
 
 	private Context context;
 	

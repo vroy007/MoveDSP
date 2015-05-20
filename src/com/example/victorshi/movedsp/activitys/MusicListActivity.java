@@ -5,21 +5,20 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.cyberway.frame.activity.BaseActivity;
 import com.cyberway.frame.adapters.CommonListAdapter;
 import com.cyberway.frame.components.RefreshListView;
 import com.cyberway.frame.utils.FileUtils;
@@ -30,7 +29,7 @@ import com.example.victorshi.movedsp.utils.CustomApplication;
  * @author smnan
  *
  */
-public class MusicListActivity extends BaseActivity implements OnClickListener {
+public class MusicListActivity extends Activity implements OnClickListener {
 
 	static final String path = "/sdcard/moveDsp";
 	
@@ -50,6 +49,7 @@ public class MusicListActivity extends BaseActivity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_music_list);
 		mContext = getApplicationContext();
 		application = (CustomApplication) getApplication();

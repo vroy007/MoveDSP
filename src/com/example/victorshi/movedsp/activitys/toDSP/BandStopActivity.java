@@ -11,6 +11,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Color;
@@ -21,6 +22,7 @@ import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
@@ -36,7 +38,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.cyberway.frame.activity.BaseActivity;
 import com.cyberway.frame.components.DialogUtil;
 import com.cyberway.frame.utils.LogUtil;
 import com.example.victorshi.movedsp.R;
@@ -58,7 +59,7 @@ import com.jjoe64.graphview.LineGraphView;
  * @author smnan
  *
  */
-public class BandStopActivity extends BaseActivity implements OnClickListener{
+public class BandStopActivity extends Activity implements OnClickListener{
 
 	private static final String TAG = "BandStopActivity";
 	private static final String ResultPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/moveDsp/result.txt";
@@ -116,6 +117,7 @@ public class BandStopActivity extends BaseActivity implements OnClickListener{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_band_stop);
 		
 		mContext = getApplicationContext();
@@ -506,7 +508,8 @@ public class BandStopActivity extends BaseActivity implements OnClickListener{
 				BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 				double[] result = ResData.get(1);
 				for(int i = 0; i < result.length; i++) {
-					writer.write(String.valueOf(result[i]) + "\n");
+					writer.write(String.valueOf(result[i]));
+					writer.write("\r\n");   //自动换行
 				}
 				writer.flush();
 				writer.close();

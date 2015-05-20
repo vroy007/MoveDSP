@@ -35,9 +35,6 @@
             android:name=".activitys.MusicListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activitys.toDSP.LowPassActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".activitys.EnterActivity"
             android:screenOrientation="portrait" />
         <activity

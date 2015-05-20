@@ -2,6 +2,7 @@ package com.example.victorshi.movedsp.activitys;
 
 import java.util.ArrayList;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -19,6 +20,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
@@ -31,11 +33,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.cyberway.frame.activity.BaseActivity;
 import com.cyberway.frame.utils.DeviceUtil;
 import com.cyberway.frame.utils.StringUtil;
 import com.example.victorshi.movedsp.R;
-import com.example.victorshi.movedsp.activitys.toDSP.LowPassActivity;
 import com.example.victorshi.movedsp.components.URecorder;
 import com.example.victorshi.movedsp.model.DataModel;
 import com.example.victorshi.movedsp.utils.CustomApplication;
@@ -47,7 +47,7 @@ import com.example.victorshi.movedsp.views.VisualizerView;
  * @author smnan
  *
  */
-public class MainActivity extends BaseActivity implements OnClickListener{
+public class MainActivity extends Activity implements OnClickListener{
 
 	private int isAddVisualizer = 0;
 	private boolean isAudio = false;
@@ -104,6 +104,7 @@ public class MainActivity extends BaseActivity implements OnClickListener{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
 		mContext = getApplicationContext();
 		application = (CustomApplication) getApplication();

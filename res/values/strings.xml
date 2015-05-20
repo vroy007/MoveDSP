@@ -12,6 +12,6 @@
     <string name="title_activity_enter">EnterActivity</string>
     <string name="title_activity_band_stop">BandStopActivity</string>
     <string name="filterTips">50HzIIR陷波器（直接Ⅱ型）\n滤波器参数：\n*阻带上下边界频率：49.9Hz、50.1Hz\n*通带上下边界频率：49Hz、51Hz\n*通带最大衰减：1dB\n*阻带最小衰减：60dB\n*采样率：1000Hz\n*三种类型选择：巴特沃斯、切比雪夫Ⅰ、切比雪夫Ⅱ</string>
-    <string name="statement">Made By\n11通信4班\n石孟楠\nVersion: 1.0.0</string>
+    <string name="statement">Made By\nscuter_victor\nVersion: 1.0.0</string>
 
 </resources>
